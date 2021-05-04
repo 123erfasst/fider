@@ -1,11 +1,11 @@
-subject: Sign in to {{ .tenantName }}
+subject: Im {{ .tenantName }} Feedback Forum anmelden
 body:
 <tr>
   <td>
-    <h2 style="color:#1c262d">Hello!</h2>
-    <p style="color:#1c262d">You asked us to send you a sign-in link and here it is.</p>
-    <p style="color:#1c262d">Click the link below to sign in to <strong>{{ .tenantName }}</strong>.</p>
+    <h2 style="color:#1c262d">Hallo!</h2>
+    <p style="color:#1c262d">Hier ist dein Link zum Anmelden.</p>
+    <p style="color:#1c262d">Klicke auf folgenden Link um dich im <strong>{{ .tenantName }}</strong> Feedback Forum anzumelden. Wir sind gespannt auf deine Beiträge.</p>
     <p>{{ .link }}</p>
-    <p style="color:#666;font-size:14px">Note: This link will expire in 30 minutes and can only be used one time.</p>
+    <p style="color:#666;font-size:14px">Hinweis: Dieser Link kann nur einmal benutzt werden und läuft nach 30 Minuten ab.</p>
   </td>
 </tr>

@@ -1,11 +1,11 @@
-subject: Confirm your new email
+subject: Bestätige deine neue Mail
 body:
 <tr>
   <td>
-    <h2 style="color:#1c262d">Hello, {{ .name }}!</h2>
-    <p style="color:#1c262d">You have requested to change your email from {{ .oldEmail }} to {{ .newEmail }}.</p>
-    <p style="color:#1c262d">Click the link below to confirm this operation.</p>
+    <h2 style="color:#1c262d">Hallo, {{ .name }}!</h2>
+    <p style="color:#1c262d">Du hast beantragt deine Mail von {{ .oldEmail }} zu {{ .newEmail }} zu ändern.</p>
+    <p style="color:#1c262d">Klicke auf den folgenden Link, um diese Änderung zu bestätigen.</p>
     <p>{{ .link }}</p>
-    <p style="color:#666;font-size:14px">Note: This link will expire in 24 hours and can only be used one time.</p>
+    <p style="color:#666;font-size:14px">Hinweis: Dieser Link kann nur einmal verwendet werden und läuft nach 24 Stunden ab.</p>
   </td>
 </tr>

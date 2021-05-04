@@ -4,15 +4,15 @@ body:
   <td>
     <p style="padding-bottom:10px;border-bottom:1px solid #efefef;color:#1c262d">
       {{ if .duplicate }}
-        <strong>{{ .title }} ({{ .postLink }})</strong> has been closed as a <strong>{{ .status }}</strong> of {{ .duplicate }}.
+        <strong>{{ .title }} ({{ .postLink }})</strong> wurde geschlossen als <strong>{{ .status }}</strong> von {{ .duplicate }}.
       {{ else }}
-        Status of <strong>{{ .title }} ({{ .postLink }})</strong> has changed to <strong>{{ .status }}</strong>.
+        Der Status von <strong>{{ .title }} ({{ .postLink }})</strong> wurde zu <strong>{{ .status }}</strong> geändert.
       {{ end }}
     </p>
     {{ .content }}
     <p style="color:#666;font-size:14px">
       — <br />
-      You are receiving this email because you are subscribed to this post. You can {{ .view }}, {{ .unsubscribe }} or {{ .change }}.
+      Du erhälst diese Mail, weil du die Seite abboniert hast. Du kannst ihn {{ .view }}, {{ .unsubscribe }} oder {{ .change }}.
     </p>
   </td>
 </tr>

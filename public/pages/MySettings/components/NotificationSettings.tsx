@@ -76,7 +76,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
 
   return (
     <>
-      <Field label="Notifications">
+      <Field label="Benachrichtigungen">
         <p className="text-muted">Benutze die folgenden Einstellungen um zu steuern, über welche Events du benachrichtigt werden möchtest.</p>
 
         <div className="notifications-settings">

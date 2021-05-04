@@ -104,18 +104,18 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
   public render() {
     const changeEmail = (
       <Button variant="tertiary" size="small" onClick={this.startChangeEmail}>
-        change
+        ändern
       </Button>
     )
 
     return (
       <div id="p-my-settings" className="page container">
         <Modal.Window isOpen={this.state.showModal} onClose={this.closeModal}>
-          <Modal.Header>Confirm your new email</Modal.Header>
+          <Modal.Header>Bestätige deine Mail-Adresse</Modal.Header>
           <Modal.Content>
             <div>
               <p>
-                We have just sent a confirmation link to <b>{this.state.newEmail}</b>. <br /> Click the link to update your email.
+                Wir haben einen Bestätigungslink an <b>{this.state.newEmail}</b> geschickt. <br /> Klicke auf den Link um deinen Account zu bestätigen.
               </p>
               <p>
                 <a href="#" onClick={this.closeModal}>
@@ -126,7 +126,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
           </Modal.Content>
         </Modal.Window>
 
-        <PageTitle title="Settings" subtitle="Manage your profile settings" />
+        <PageTitle title="Einstellungen" subtitle="Verwalte deine Profileinstellungen" />
 
         <div className="w-max-7xl">
           <Form error={this.state.error}>
@@ -141,16 +141,16 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
             >
               <p className="text-muted">
                 {Fider.session.user.email || this.state.changingEmail
-                  ? "Your email is private and will never be publicly displayed."
-                  : "Your account doesn't have an email."}
+                  ? "Deine Mail ist privat wird niemals öffentlich angezeigt."
+                  : "Dein Account hat keine Mail."}
               </p>
               {this.state.changingEmail && (
                 <>
                   <Button variant="primary" size="small" onClick={this.submitNewEmail}>
-                    Confirm
+                    Speichern
                   </Button>
                   <Button variant="tertiary" size="small" onClick={this.cancelChangeEmail}>
-                    Cancel
+                    Abbrechen
                   </Button>
                 </>
               )}
@@ -171,18 +171,18 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
             >
               {this.state.avatarType === UserAvatarType.Gravatar && (
                 <p className="text-muted mt-1">
-                  A{" "}
+                  Ein{" "}
                   <a className="text-link" rel="noopener" href="https://en.gravatar.com" target="_blank">
                     Gravatar
                   </a>{" "}
-                  will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you.
+                  wird basierend auf deiner Mail-Adresse generiert.
                 </p>
               )}
               {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">A letter avatar based on your initials is generated for you.</p>}
               {this.state.avatarType === UserAvatarType.Custom && (
                 <ImageUploader field="avatar" onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
                   <p className="text-muted">
-                    We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 50x50 pixels.
+                    Wir akzeptieren JPG, GIF und PNG Bilder, kleiner als 100KB und mit einem Seitenverhältnis von 1:1 und minimal 50x50 Pixeln.
                   </p>
                 </ImageUploader>
               )}
@@ -191,7 +191,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
             <NotificationSettings userSettings={this.props.userSettings} settingsChanged={this.setNotificationSettings} />
 
             <Button variant="primary" onClick={this.confirm}>
-              Save
+              Speichern
             </Button>
           </Form>
 

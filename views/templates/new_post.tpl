@@ -3,12 +3,12 @@ body:
 <tr>
   <td>
     <p style="padding-bottom:10px;border-bottom:1px solid #efefef;color:#1c262d">
-      <strong>{{ .userName }}</strong> created a new post <strong>{{ .title }} ({{ .postLink }})</strong>.
+      <strong>{{ .userName }}</strong> hat einen neuen Beitrag erstellt <strong>{{ .title }} ({{ .postLink }})</strong>.
     </p>
     {{ .content }}
     <p style="color:#666;font-size:14px">
       — <br />
-      You are receiving this email because you are subscribed to this site. You can {{ .view }} or {{ .change }}.
+      Du erhälst diese Mail, weil du die Seite abboniert hast. Du kannst ihn {{ .view }} oder {{ .change }}.
     </p>
   </td>
 </tr>

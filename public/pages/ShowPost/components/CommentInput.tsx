@@ -64,7 +64,7 @@ export const CommentInput = (props: CommentInputProps) => {
               </div>
             )}
             <TextArea
-              placeholder="Leave a comment"
+              placeholder="Schreibe einen Kommentar"
               field="content"
               value={content}
               minRows={1}

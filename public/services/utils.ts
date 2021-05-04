@@ -53,17 +53,17 @@ export const formatDate = (input: Date | string, format: DateFormat = "full"): s
 }
 
 const templates: { [key: string]: string } = {
-  seconds: "weniger als eine Minute",
-  minute: "etwa eine Minute",
+  seconds: "weniger als einer Minute",
+  minute: "etwa einer Minute",
   minutes: "%d Minuten",
-  hour: "etwa eine Stunde",
+  hour: "etwa einer Stunde",
   hours: "%d Stunden",
-  day: "ein Tag",
-  days: "%d Tage",
-  month: "etwa ein Monat",
-  months: "%d Monate",
-  year: "etwa ein Jahr",
-  years: "%d Jahre",
+  day: "einem Tag",
+  days: "%d Tagen",
+  month: "etwa einem Monat",
+  months: "%d Monaten",
+  year: "etwa einen Jahr",
+  years: "%d Jahren",
 }
 
 const template = (t: string, n: number): string => {

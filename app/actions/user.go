@@ -122,17 +122,17 @@ func (input *ChangeUserEmail) Validate(ctx context.Context, user *models.User) *
 	result := validate.Success()
 
 	if input.Model.Email == "" {
-		result.AddFieldFailure("email", "Email is required.")
+		result.AddFieldFailure("email", "Mail muss gefüllt sein")
 		return result
 	}
 
 	if len(input.Model.Email) > 200 {
-		result.AddFieldFailure("email", "Email must have less than 200 characters.")
+		result.AddFieldFailure("email", "Mail muss weniger als 200 Zeichen lang sein")
 		return result
 	}
 
 	if user.Email == input.Model.Email {
-		result.AddFieldFailure("email", "Choose a different email.")
+		result.AddFieldFailure("email", "Wähle eine andere Mail.")
 		return result
 	}
 
@@ -148,7 +148,7 @@ func (input *ChangeUserEmail) Validate(ctx context.Context, user *models.User) *
 		return validate.Error(err)
 	}
 	if err == nil && userByEmail.Result.ID != user.ID {
-		result.AddFieldFailure("email", "This email is already in use by someone else")
+		result.AddFieldFailure("email", "Diese Mail wird bereits verwendet.")
 		return result
 	}
 	input.Model.Requestor = user

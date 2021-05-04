@@ -110,7 +110,7 @@ func NotifyAboutNewPost(post *models.Post) worker.Task {
 			return c.Failure(err)
 		}
 
-		title := fmt.Sprintf("New post: **%s**", post.Title)
+		title := fmt.Sprintf("Neuer Beitrag: **%s**", post.Title)
 		link := fmt.Sprintf("/posts/%d/%s", post.Number, post.Slug)
 		for _, user := range users {
 			if user.ID != c.User().ID {
@@ -145,8 +145,8 @@ func NotifyAboutNewPost(post *models.Post) worker.Task {
 			"userName":   c.User().Name,
 			"content":    markdown.Full(post.Description),
 			"postLink":   linkWithText(fmt.Sprintf("#%d", post.Number), web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"view":       linkWithText("view it on your browser", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"change":     linkWithText("change your notification preferences", web.BaseURL(c), "/settings"),
+			"view":       linkWithText("ihn in deinem Browser ansehen", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
+			"change":     linkWithText("deine Benachrichtigungseinstellungen ändern", web.BaseURL(c), "/settings"),
 			"logo":       web.LogoURL(c),
 		}
 
@@ -170,7 +170,7 @@ func NotifyAboutNewComment(post *models.Post, comment *models.NewComment) worker
 			return c.Failure(err)
 		}
 
-		title := fmt.Sprintf("**%s** left a comment on **%s**", c.User().Name, post.Title)
+		title := fmt.Sprintf("**%s** hat einen Kommentar an **%s** hinterlassen", c.User().Name, post.Title)
 		link := fmt.Sprintf("/posts/%d/%s", post.Number, post.Slug)
 		for _, user := range users {
 			if user.ID != c.User().ID {
@@ -205,9 +205,9 @@ func NotifyAboutNewComment(post *models.Post, comment *models.NewComment) worker
 			"userName":    c.User().Name,
 			"content":     markdown.Full(comment.Content),
 			"postLink":    linkWithText(fmt.Sprintf("#%d", post.Number), web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"view":        linkWithText("view it on your browser", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"unsubscribe": linkWithText("unsubscribe from it", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"change":      linkWithText("change your notification preferences", web.BaseURL(c), "/settings"),
+			"view":        linkWithText("ihn in deinem Browser ansehen", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
+			"unsubscribe": linkWithText("diesen Beitrag abbestellen", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
+			"change":      linkWithText("deine Benachrichtigungseinstellungen ändern", web.BaseURL(c), "/settings"),
 			"logo":        web.LogoURL(c),
 		}
 
@@ -277,9 +277,9 @@ func NotifyAboutStatusChange(post *models.Post, prevStatus enum.PostStatus) work
 			"content":     markdown.Full(post.Response.Text),
 			"status":      post.Status.Name(),
 			"duplicate":   duplicate,
-			"view":        linkWithText("view it on your browser", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"unsubscribe": linkWithText("unsubscribe from it", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
-			"change":      linkWithText("change your notification preferences", web.BaseURL(c), "/settings"),
+			"view":        linkWithText("ihn in deinem Browser ansehen", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
+			"unsubscribe": linkWithText("diesen Beitrag abbestellen", web.BaseURL(c), "/posts/%d/%s", post.Number, post.Slug),
+			"change":      linkWithText("deine Benachrichtigungseinstellungen ändern", web.BaseURL(c), "/settings"),
 			"logo":        web.LogoURL(c),
 		}
 
@@ -335,7 +335,7 @@ func NotifyAboutDeletedPost(post *models.Post) worker.Task {
 			"title":      post.Title,
 			"tenantName": c.Tenant().Name,
 			"content":    markdown.Full(post.Response.Text),
-			"change":     linkWithText("change your notification preferences", web.BaseURL(c), "/settings"),
+			"change":     linkWithText("deine Benachrichtigungseinstellungen ändern", web.BaseURL(c), "/settings"),
 			"logo":       web.LogoURL(c),
 		}
 

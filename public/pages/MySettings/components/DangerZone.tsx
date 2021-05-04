@@ -56,13 +56,13 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
           </Modal.Footer>
         </Modal.Window>
 
-        <h4 className="text-title mb-1">Delete account</h4>
+        <h4 className="text-title mb-1">Account löschen</h4>
         <p className="text-muted">
           Wenn du deinen Account löschst, werden wir alle persönlichen Informationen dieses Accounts löschen. Deine Beiträge bleiben bestehen, werden aber anonymisiert.
         </p>
         <p className="text-muted">Dieser Prozess kann nicht rückgängig gemacht werden. <strong>Bist du sicher?</strong></p>
         <Button variant="danger" size="small" onClick={this.onClickDelete}>
-          Löscht meinen Account
+          Lösche meinen Account
         </Button>
       </div>
     )
