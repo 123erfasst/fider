@@ -423,9 +423,9 @@ const DesignSystemPage = () => {
           label="Status"
           field="status"
           options={[
-            { value: "open", label: "Open" },
-            { value: "started", label: "Started" },
-            { value: "planned", label: "Planned" },
+            { value: "open", label: "Offen" },
+            { value: "started", label: "Gestartet" },
+            { value: "planned", label: "Geplant" },
           ]}
           onChange={notifyStatusChange}
         />
