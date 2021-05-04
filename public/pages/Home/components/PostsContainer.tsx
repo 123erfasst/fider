@@ -120,7 +120,7 @@ export class PostsContainer extends React.Component<PostsContainerProps, PostsCo
             />
           </div>
         </div>
-        <ListPosts posts={this.state.posts} tags={this.props.tags} emptyText={"Kein Ergebnis für deine Suche, versuch andere Begriffe."} />
+        <ListPosts posts={this.state.posts} tags={this.props.tags} emptyText={"Kein Ergebnis für deine Suche, versuche andere Begriffe."} />
         {this.state.loading && <Loader />}
         {showMoreLink && (
           <div className="my-4 ml-4">

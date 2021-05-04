@@ -52,7 +52,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = (props
               </React.Fragment>
             ))}
           </div>
-          <p className="text-muted">We will never post to these accounts on your behalf.</p>
+          <p className="text-muted">Wir werden niemals in deinem Namen posten.</p>
         </>
       )}
 
@@ -60,17 +60,17 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = (props
 
       {props.useEmail && (
         <div>
-          <p>Enter your email address to sign in</p>
+          <p>Gib deine Mail ein um dich anzumelden</p>
           <Form error={error}>
             <Input
               field="email"
               value={email}
               autoFocus={!device.isTouch()}
               onChange={setEmail}
-              placeholder="yourname@example.com"
+              placeholder="deinname@example.com"
               suffix={
                 <Button type="submit" variant="primary" disabled={email === ""} onClick={signIn}>
-                  Sign in
+                  Anmelden
                 </Button>
               }
             />
