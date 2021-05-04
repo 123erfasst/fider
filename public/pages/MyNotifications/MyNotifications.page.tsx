@@ -59,25 +59,25 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
   public render() {
     return (
       <div id="p-my-notifications" className="page container">
-        <PageTitle title="Notifications" subtitle="Stay up to date with what's happening" />
+        <PageTitle title="Benachrichtigungen" subtitle="Bleibe auf dem Laufenden." />
 
         <HStack spacing={4} className="mt-8 mb-2">
-          <h4 className="text-title">Unread</h4>
+          <h4 className="text-title">Ungelesen</h4>
           {this.state.unread.length > 0 && (
             <a href="#" className="text-link text-xs" onClick={this.markAllAsRead}>
-              Mark All as Read
+              Alle als gelesen markieren
             </a>
           )}
         </HStack>
 
         <VStack spacing={4}>
           {this.state.unread.length > 0 && this.items(this.state.unread)}
-          {this.state.unread.length === 0 && <span className="text-muted">No unread notifications.</span>}
+          {this.state.unread.length === 0 && <span className="text-muted">Keine ungelesenen Benachrichtigungen.</span>}
         </VStack>
 
         {this.state.recent.length > 0 && (
           <>
-            <h4 className="text-title mt-8 mb-2">Read on last 30 days</h4>
+            <h4 className="text-title mt-8 mb-2">Weitere der letzten 30 Tage lesen</h4>
             <VStack spacing={4}>{this.items(this.state.recent)}</VStack>
           </>
         )}

@@ -78,7 +78,7 @@ export const timeSince = (now: Date, date: Date): string => {
   const years = days / 365
 
   return (
-    ((seconds < 45 && template("seconds", seconds)) ||
+    "vor " + ((seconds < 45 && template("seconds", seconds)) ||
       (seconds < 90 && template("minute", 1)) ||
       (minutes < 45 && template("minutes", minutes)) ||
       (minutes < 90 && template("hour", 1)) ||
@@ -88,7 +88,7 @@ export const timeSince = (now: Date, date: Date): string => {
       (days < 45 && template("month", 1)) ||
       (days < 365 && template("months", days / 30)) ||
       (years < 1.5 && template("year", 1)) ||
-      template("years", years)) + " ago"
+      template("years", years))
   )
 }
 

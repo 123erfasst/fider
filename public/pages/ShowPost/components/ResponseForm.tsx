@@ -87,7 +87,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
                   <PostSearch exclude={[this.props.post.number]} onChanged={this.setOriginalNumber} />
                 </Field>
                 <DisplayError fields={["originalNumber"]} error={this.state.error} />
-                <span className="text-muted">Wähler von diesem Beitrag werden in den originalen Beitrag gemerged.</span>
+                <span className="text-muted">Stimmen von diesem Beitrag werden in den originalen Beitrag gemerged.</span>
               </>
             ) : (
               <TextArea

@@ -48,7 +48,7 @@ export const PostSearch = (props: PostSearchProps) => {
           <VStack onClick={selectPost(p)} className={`bg-gray-50 p-4 clickable border-2 rounded ${selectedPost === p ? "border-primary-base" : ""}`} key={p.id}>
             <HStack className="text-2xs">
               <span>#{p.number}</span> <span>&middot;</span> <ShowPostStatus status={PostStatus.Get(p.status)} /> <span>&middot;</span>{" "}
-              <span>{p.votesCount} wähler</span>
+              <span>{p.votesCount} Stimmen</span>
             </HStack>
             <span>{p.title}</span>
           </VStack>

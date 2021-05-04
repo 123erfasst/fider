@@ -29,7 +29,7 @@ export const VotesPanel = (props: VotesPanelProps) => {
   return (
     <VStack>
       <VotesModal post={props.post} isOpen={isVotesModalOpen} onClose={closeModal} />
-      <span className="text-category">Wähler</span>
+      <span className="text-category">Stimmen</span>
       <HStack>
         {props.votes.length > 0 && <AvatarStack users={props.votes.map((x) => x.user)} />}
         {extraVotesCount > 0 && (

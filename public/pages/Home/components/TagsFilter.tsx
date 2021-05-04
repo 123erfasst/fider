@@ -20,7 +20,7 @@ export const TagsFilter = (props: TagsFilterProps) => {
     props.selectionChanged(next)
   }
 
-  const label = selected.length === 1 ? "1 tag" : selected.length >= 2 ? `${selected.length} tags` : "Any Tag"
+  const label = selected.length === 1 ? "1 tag" : selected.length >= 2 ? `${selected.length} tags` : "allen Tags"
 
   return (
     <HStack>

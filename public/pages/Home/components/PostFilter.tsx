@@ -27,13 +27,13 @@ export const PostFilter = (props: PostFilterProps) => {
 
   const options: OptionItem[] = [
     { value: "trending", label: "Trending" },
-    { value: "recent", label: "Recent" },
-    { value: "most-wanted", label: "Most Wanted" },
-    { value: "most-discussed", label: "Most Discussed" },
+    { value: "recent", label: "Neuste" },
+    { value: "most-wanted", label: "Meiste Stimmen" },
+    { value: "most-discussed", label: "Meiste Kommentare" },
   ]
 
   if (fider.session.isAuthenticated) {
-    options.push({ value: "my-votes", label: "My Votes" })
+    options.push({ value: "my-votes", label: "Meine Stimmen" })
   }
 
   PostStatus.All.filter((s) => s.filterable && props.countPerStatus[s.value]).forEach((s) => {
@@ -49,7 +49,7 @@ export const PostFilter = (props: PostFilterProps) => {
 
   return (
     <HStack>
-      <span className="text-category">Ansehen</span>
+      <span className="text-category">Zeige</span>
       <Dropdown renderHandle={<div className="text-medium text-xs uppercase rounded-md uppercase bg-gray-100 px-2 py-1">{label}</div>}>
         {options.map((o) => (
           <Dropdown.ListItem onClick={handleChangeView(o)} key={o.value}>

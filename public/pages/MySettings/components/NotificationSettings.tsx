@@ -49,25 +49,25 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
     if (!webEnabled && !emailEnabled) {
       return (
         <p className="text-muted">
-          You&apos;ll <strong>NOT</strong> receive any notification about this event.
+          Du wirst <strong>keine</strong> Benachrichtigungen über dieses Event erhalten.
         </p>
       )
     } else if (webEnabled && !emailEnabled) {
       return (
         <p className="text-muted">
-          You&apos;ll receive <strong>web</strong> notifications about {about}.
+          Du erhälst <strong>Web</strong> Benachrichtigungen erhalten über {about}.
         </p>
       )
     } else if (!webEnabled && emailEnabled) {
       return (
         <p className="text-muted">
-          You&apos;ll receive <strong>email</strong> notifications about {about}.
+          Du erhälst <strong>Mail</strong> Benachrichtigungen erhalten über {about}.
         </p>
       )
     } else if (webEnabled && emailEnabled) {
       return (
         <p className="text-muted">
-          You&apos;ll receive <strong>web</strong> and <strong>email</strong> notifications about {about}.
+          Du erhälst <strong>Mail</strong> und <strong>Web</strong> Benachrichtigungen erhalten über {about}.
         </p>
       )
     }
@@ -77,32 +77,32 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
   return (
     <>
       <Field label="Notifications">
-        <p className="text-muted">Use following panel to choose which events you&apos;d like to receive notification</p>
+        <p className="text-muted">Benutze die folgenden Einstellungen um zu steuern, über welche Events du benachrichtigt werden möchtest.</p>
 
         <div className="notifications-settings">
           <VStack spacing={4} divide={true} className="p-2 bg-gray-50 rounded">
             <div>
-              <div className="mb-1">New Post</div>
-              {info("event_notification_new_post", "new posts on this site", "new posts on this site")}
+              <div className="mb-1">Neuer Beitrag</div>
+              {info("event_notification_new_post", "neue Beiträge auf dieser Seite", "neue Beiträge auf dieser Seite")}
               <HStack spacing={6}>
                 {icon("event_notification_new_post", WebChannel)}
                 {icon("event_notification_new_post", EmailChannel)}
               </HStack>
             </div>
             <div>
-              <div className="mb-1">Discussion</div>
-              {info("event_notification_new_comment", "comments on posts you've subscribed to", "comments on all posts unless individually unsubscribed")}
+              <div className="mb-1">Diskussion</div>
+              {info("event_notification_new_comment", "Kommentare an Beiträgen zu denen du abboniert bist", "Kommentare an allen Beiträgen, außer von denen, die du explizit abbestellt hast")}
               <HStack spacing={6}>
                 {icon("event_notification_new_comment", WebChannel)}
                 {icon("event_notification_new_comment", EmailChannel)}
               </HStack>
             </div>
             <div>
-              <div className="mb-1">Status Changed</div>
+              <div className="mb-1">Statusänderung</div>
               {info(
                 "event_notification_change_status",
-                "status change on posts you've subscribed to",
-                "status change on all posts unless individually unsubscribed"
+                "Statusänderungen von Beiträgen zu denen du abboniert bist",
+                "Statusänderungen von allen Beiträgen, außer von denen, die du explizit abbestellt hast"
               )}
               <HStack spacing={6}>
                 {icon("event_notification_change_status", WebChannel)}

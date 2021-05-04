@@ -110,7 +110,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                   )}
 
                   <span className="text-muted">
-                    Posted by <UserName user={this.props.post.user} /> &middot; <Moment date={this.props.post.createdAt} />
+                    Von <UserName user={this.props.post.user} /> &middot; <Moment date={this.props.post.createdAt} />
                   </span>
                 </div>
               </HStack>
@@ -141,7 +141,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
             {Fider.session.isAuthenticated && Fider.session.user.isCollaborator && (
               <VStack>
                 <span key={0} className="text-category">
-                  Actions
+                  Aktionen
                 </span>
                 {this.state.editMode ? (
                   <VStack>

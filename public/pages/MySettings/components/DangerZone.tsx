@@ -37,34 +37,32 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
     return (
       <div>
         <Modal.Window isOpen={this.state.clicked} center={false} onClose={this.onCancel}>
-          <Modal.Header>Delete account</Modal.Header>
+          <Modal.Header>Account löschen</Modal.Header>
           <Modal.Content>
             <p>
-              When you choose to delete your account, we will erase all your personal information forever. The content you have published will remain, but it
-              will be anonymised.
+              Wenn du deinen Account löschst, werden wir alle persönlichen Informationen dieses Accounts löschen. Deine Beiträge bleiben bestehen, werden aber anonymisiert.
             </p>
             <p>
-              This process is irreversible. <strong>Are you sure?</strong>
+              Dieser Prozess kann nicht rückgängig gemacht werden. <strong>Bist du sicher?</strong>
             </p>
           </Modal.Content>
           <Modal.Footer>
             <Button variant="danger" size="small" onClick={this.onConfirm}>
-              Confirm
+              Bestätigen
             </Button>
             <Button variant="tertiary" size="small" onClick={this.onCancel}>
-              Cancel
+              Abbrechen
             </Button>
           </Modal.Footer>
         </Modal.Window>
 
         <h4 className="text-title mb-1">Delete account</h4>
         <p className="text-muted">
-          When you choose to delete your account, we will erase all your personal information forever. The content you have published will remain, but it will
-          be anonymised.
+          Wenn du deinen Account löschst, werden wir alle persönlichen Informationen dieses Accounts löschen. Deine Beiträge bleiben bestehen, werden aber anonymisiert.
         </p>
-        <p className="text-muted">This process is irreversible. Please be certain.</p>
+        <p className="text-muted">Dieser Prozess kann nicht rückgängig gemacht werden. <strong>Bist du sicher?</strong></p>
         <Button variant="danger" size="small" onClick={this.onClickDelete}>
-          Delete My Account
+          Löscht meinen Account
         </Button>
       </div>
     )
