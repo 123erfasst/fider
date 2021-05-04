@@ -163,9 +163,9 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
               field="avatarType"
               defaultValue={this.state.avatarType}
               options={[
-                { label: "Letter", value: UserAvatarType.Letter },
+                { label: "Initialen", value: UserAvatarType.Letter },
                 { label: "Gravatar", value: UserAvatarType.Gravatar },
-                { label: "Custom", value: UserAvatarType.Custom },
+                { label: "Benutzerdefiniert", value: UserAvatarType.Custom },
               ]}
               onChange={this.avatarTypeChanged}
             >
@@ -178,7 +178,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                   wird basierend auf deiner Mail-Adresse generiert.
                 </p>
               )}
-              {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">A letter avatar based on your initials is generated for you.</p>}
+              {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">Ein Avatar, basierend auf einen Initialen, wird generiert</p>}
               {this.state.avatarType === UserAvatarType.Custom && (
                 <ImageUploader field="avatar" onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
                   <p className="text-muted">

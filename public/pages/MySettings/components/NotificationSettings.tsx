@@ -36,7 +36,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
 
   const icon = (settingsKey: string, channel: Channel) => {
     const active = isEnabled(settingsKey, channel)
-    const label = channel === WebChannel ? "Web" : "Email"
+    const label = channel === WebChannel ? "Web" : "Mail"
     const onToggle = () => toggle(settingsKey, channel)
     return <Toggle key={`${settingsKey}_${channel}`} active={active} label={label} onToggle={onToggle} />
   }
@@ -55,19 +55,19 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
     } else if (webEnabled && !emailEnabled) {
       return (
         <p className="text-muted">
-          Du erhälst <strong>Web</strong> Benachrichtigungen erhalten über {about}.
+          Du erhälst <strong>Web</strong> Benachrichtigungen über {about}.
         </p>
       )
     } else if (!webEnabled && emailEnabled) {
       return (
         <p className="text-muted">
-          Du erhälst <strong>Mail</strong> Benachrichtigungen erhalten über {about}.
+          Du erhälst <strong>Mail</strong> Benachrichtigungen über {about}.
         </p>
       )
     } else if (webEnabled && emailEnabled) {
       return (
         <p className="text-muted">
-          Du erhälst <strong>Mail</strong> und <strong>Web</strong> Benachrichtigungen erhalten über {about}.
+          Du erhälst <strong>Mail</strong> und <strong>Web</strong> Benachrichtigungen über {about}.
         </p>
       )
     }
