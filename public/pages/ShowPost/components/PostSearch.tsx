@@ -42,13 +42,13 @@ export const PostSearch = (props: PostSearchProps) => {
 
   return (
     <>
-      <Input field="query" icon={IconSearch} placeholder="Search original post..." value={query} onChange={setQuery} />
+      <Input field="query" icon={IconSearch} placeholder="Suche nach originalem Beitrag..." value={query} onChange={setQuery} />
       <div className="grid gap-2 grid-cols-1 lg:grid-cols-3">
         {posts.map((p) => (
           <VStack onClick={selectPost(p)} className={`bg-gray-50 p-4 clickable border-2 rounded ${selectedPost === p ? "border-primary-base" : ""}`} key={p.id}>
             <HStack className="text-2xs">
               <span>#{p.number}</span> <span>&middot;</span> <ShowPostStatus status={PostStatus.Get(p.status)} /> <span>&middot;</span>{" "}
-              <span>{p.votesCount} votes</span>
+              <span>{p.votesCount} wähler</span>
             </HStack>
             <span>{p.title}</span>
           </VStack>

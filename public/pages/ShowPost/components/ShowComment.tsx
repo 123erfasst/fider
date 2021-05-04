@@ -70,16 +70,16 @@ export const ShowComment = (props: ShowCommentProps) => {
         <Modal.Header>Delete Comment</Modal.Header>
         <Modal.Content>
           <p>
-            This process is irreversible. <strong>Are you sure?</strong>
+            Dieser Vorgang kann nicht rückgängig gemacht werden. <strong>Bist du sicher?</strong>
           </p>
         </Modal.Content>
 
         <Modal.Footer>
           <Button variant="danger" onClick={deleteComment}>
-            Delete
+            Löschen
           </Button>
           <Button variant="tertiary" onClick={closeModal}>
-            Cancel
+            Abbrechen
           </Button>
         </Modal.Footer>
       </Modal.Window>
@@ -89,7 +89,7 @@ export const ShowComment = (props: ShowCommentProps) => {
   const comment = props.comment
 
   const editedMetadata = !!comment.editedAt && !!comment.editedBy && (
-    <span data-tooltip={`This comment has been edited by ${comment.editedBy.name} on ${formatDate(comment.editedAt)}`}>· edited</span>
+    <span data-tooltip={`Dieser Kommentar wurde durch ${comment.editedBy.name} am ${formatDate(comment.editedAt)} gelöscht`}>· edited</span>
   )
 
   return (
@@ -109,9 +109,9 @@ export const ShowComment = (props: ShowCommentProps) => {
             </HStack>
             {!isEditing && canEditComment() && (
               <Dropdown position="left" renderHandle={<Icon sprite={IconDotsHorizontal} width="16" height="16" />}>
-                <Dropdown.ListItem onClick={onActionSelected("edit")}>Edit</Dropdown.ListItem>
+                <Dropdown.ListItem onClick={onActionSelected("edit")}>Bearbeiten</Dropdown.ListItem>
                 <Dropdown.ListItem onClick={onActionSelected("delete")} className="text-red-700">
-                  Delete
+                  Löschen
                 </Dropdown.ListItem>
               </Dropdown>
             )}
@@ -123,10 +123,10 @@ export const ShowComment = (props: ShowCommentProps) => {
               <TextArea field="content" minRows={1} value={newContent} placeholder={comment.content} onChange={setNewContent} />
               <MultiImageUploader field="attachments" bkeys={comment.attachments} maxUploads={2} onChange={setAttachments} />
               <Button size="small" onClick={saveEdit} variant="primary">
-                Save
+                Speichern
               </Button>
               <Button variant="tertiary" size="small" onClick={cancelEdit}>
-                Cancel
+                Abbrechen
               </Button>
             </Form>
           ) : (

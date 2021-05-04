@@ -67,7 +67,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
   public render() {
     const button = (
       <Button className="w-full" onClick={this.showModal}>
-        <Icon sprite={IconSpeakerPhone} /> <span>Respond</span>
+        <Icon sprite={IconSpeakerPhone} /> <span>Antworten</span>
       </Button>
     )
 
@@ -87,7 +87,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
                   <PostSearch exclude={[this.props.post.number]} onChanged={this.setOriginalNumber} />
                 </Field>
                 <DisplayError fields={["originalNumber"]} error={this.state.error} />
-                <span className="text-muted">Votes from this post will be merged into original post.</span>
+                <span className="text-muted">Wähler von diesem Beitrag werden in den originalen Beitrag gemerged.</span>
               </>
             ) : (
               <TextArea
@@ -95,7 +95,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
                 onChange={this.setText}
                 value={this.state.text}
                 minRows={5}
-                placeholder="What's going on with this post? Let your users know what are your plans..."
+                placeholder="Was passiert mit diesem Beitrag? Lass die Benutzer wissen, was passiert..."
               />
             )}
           </Form>
@@ -103,10 +103,10 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
 
         <Modal.Footer>
           <Button variant="primary" onClick={this.submit}>
-            Submit
+            Abschließen
           </Button>
           <Button variant="tertiary" onClick={this.closeModal}>
-            Cancel
+            Abbrechen
           </Button>
         </Modal.Footer>
       </Modal.Window>

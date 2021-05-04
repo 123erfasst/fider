@@ -39,7 +39,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
         <Form error={error}>
           <TextArea field="text" onChange={setText} value={text} placeholder="Why are you deleting this post? (optional)">
             <span className="text-muted">
-              This operation <strong>cannot</strong> be undone.
+              Dieser Vorgang kann nicht rückgängig gemacht werden.
             </span>
           </TextArea>
         </Form>
@@ -47,10 +47,10 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
 
       <Modal.Footer>
         <Button variant="danger" onClick={handleDelete}>
-          Delete
+          Löschen
         </Button>
         <Button variant="tertiary" onClick={hideModal}>
-          Cancel
+          Abbrechen
         </Button>
       </Modal.Footer>
     </Modal.Window>
@@ -61,7 +61,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
       {modal}
       <span className="text-category">Moderation</span>
       <Button variant="danger" size="small" className="w-full" onClick={showModal}>
-        Delete
+        Löschen
       </Button>
     </VStack>
   )

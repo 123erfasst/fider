@@ -72,7 +72,7 @@ export class VotesModal extends React.Component<VotesModalProps, VotesModalState
                 field="query"
                 icon={this.state.query ? IconX : IconSearch}
                 onIconClick={this.state.query ? this.clearSearch : undefined}
-                placeholder="Search for users by name..."
+                placeholder="Suche nach Nutzernamen..."
                 value={this.state.query}
                 onChange={this.handleSearchFilterChanged}
               />
@@ -91,7 +91,7 @@ export class VotesModal extends React.Component<VotesModalProps, VotesModalState
                     </span>
                   </HStack>
                 ))}
-                {this.state.filteredVotes.length === 0 && <p className="text-muted">No users found matching &apos;{this.state.query}&apos;.</p>}
+                {this.state.filteredVotes.length === 0 && <p className="text-muted">Keine Benutzer gefunden &apos;{this.state.query}&apos;.</p>}
               </VStack>
             </>
           )}
@@ -99,7 +99,7 @@ export class VotesModal extends React.Component<VotesModalProps, VotesModalState
 
         <Modal.Footer>
           <Button variant="tertiary" onClick={this.closeModal}>
-            Close
+            Schließen
           </Button>
         </Modal.Footer>
       </Modal.Window>

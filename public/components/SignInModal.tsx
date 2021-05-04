@@ -28,11 +28,11 @@ export const SignInModal: React.StatelessComponent<SignInModalProps> = (props) =
   const content = confirmationAddress ? (
     <>
       <p>
-        We have just sent a confirmation link to <b>{confirmationAddress}</b>. <br /> Click the link and you’ll be signed in.
+        Wir haben einen Bestätigungslink an <b>{confirmationAddress}</b> geschickt. <br /> Klicke zum Einloggen auf den Link.
       </p>
       <p>
         <Button variant="tertiary" onClick={closeModal}>
-          OK
+          Verstanden
         </Button>
       </p>
     </>
@@ -42,7 +42,7 @@ export const SignInModal: React.StatelessComponent<SignInModalProps> = (props) =
 
   return (
     <Modal.Window isOpen={props.isOpen} onClose={closeModal}>
-      <Modal.Header>Sign in to post and vote</Modal.Header>
+      <Modal.Header>Melde dich an um Beiträge zu posten und abzustimmen.</Modal.Header>
       <Modal.Content>{content}</Modal.Content>
       <LegalFooter />
     </Modal.Window>

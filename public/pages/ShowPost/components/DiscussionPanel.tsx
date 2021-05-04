@@ -16,7 +16,7 @@ export const DiscussionPanel = (props: DiscussionPanelProps) => {
   return (
     <>
       <VStack spacing={2} className="c-comment-list">
-        <span className="text-category">Discussion</span>
+        <span className="text-category">Diskussion</span>
         <VStack spacing={4} className="c-comment-list">
           {props.comments.map((c) => (
             <ShowComment key={c.id} post={props.post} comment={c} />
@@ -26,7 +26,7 @@ export const DiscussionPanel = (props: DiscussionPanelProps) => {
         {props.comments.length === 0 && (
           <div className="text-center mt-4">
             <Icon sprite={PostIllustration} height="120" />
-            <p className="text-xs">No one has commented yet.</p>
+            <p className="text-xs">Keine Kommentare bis jetzt.</p>
           </div>
         )}
       </VStack>

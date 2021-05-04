@@ -58,11 +58,11 @@ export class SimilarPosts extends React.Component<SimilarPostsProps, SimilarPost
   public render() {
     return (
       <>
-        <PageTitle title="Similar posts" subtitle="Consider voting on existing posts instead." />
+        <PageTitle title="Similar posts" subtitle="Stimme stattdessen für existierende Beiträge ab." />
         {this.state.loading ? (
           <Loader />
         ) : (
-          <ListPosts posts={this.state.posts} tags={this.props.tags} emptyText={`No similar posts matched '${this.props.title}'.`} />
+          <ListPosts posts={this.state.posts} tags={this.props.tags} emptyText={`Keine ähnlichen Beiträge gefunden für '${this.props.title}'.`} />
         )}
       </>
     )

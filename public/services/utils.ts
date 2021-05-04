@@ -17,7 +17,7 @@ export const classSet = (input?: any): string => {
   return ""
 }
 
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const monthNames = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
 
 export const currencySymbol = (currencyCode: string): string => {
   currencyCode = currencyCode ? currencyCode.toLowerCase() : ""
@@ -53,17 +53,17 @@ export const formatDate = (input: Date | string, format: DateFormat = "full"): s
 }
 
 const templates: { [key: string]: string } = {
-  seconds: "less than a minute",
-  minute: "about a minute",
-  minutes: "%d minutes",
-  hour: "about an hour",
-  hours: "about %d hours",
-  day: "a day",
-  days: "%d days",
-  month: "about a month",
-  months: "%d months",
-  year: "about a year",
-  years: "%d years",
+  seconds: "weniger als eine Minute",
+  minute: "etwa eine Minute",
+  minutes: "%d Minuten",
+  hour: "etwa eine Stunde",
+  hours: "%d Stunden",
+  day: "ein Tag",
+  days: "%d Tage",
+  month: "etwa ein Monat",
+  months: "%d Monate",
+  year: "etwa ein Jahr",
+  years: "%d Jahre",
 }
 
 const template = (t: string, n: number): string => {

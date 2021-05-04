@@ -34,7 +34,7 @@ export const Header = () => {
               )}
               {!fider.session.isAuthenticated && (
                 <a href="#" className="uppercase text-sm" onClick={showModal}>
-                  Sign in
+                  Anmelden
                 </a>
               )}
             </HStack>

@@ -31,23 +31,23 @@ export const NotificationsPanel = (props: NotificationsPanelProps) => {
 
   const button = subscribed ? (
     <Button className="w-full" onClick={subscribeOrUnsubscribe}>
-      <Icon sprite={IconVolumeOff} /> <span>Unsubscribe</span>
+      <Icon sprite={IconVolumeOff} /> <span>Abbestellen</span>
     </Button>
   ) : (
     <Button className="w-full" onClick={subscribeOrUnsubscribe}>
-      <Icon sprite={IconVolumeOn} /> <span>Subscribe</span>
+      <Icon sprite={IconVolumeOn} /> <span>Abbonieren</span>
     </Button>
   )
 
   const text = subscribed ? (
-    <span className="text-muted">You’re receiving notifications about activity on this post.</span>
+    <span className="text-muted">Du erhälst Benachrichtigungen über Aktivitäten an diesem Beitrag.</span>
   ) : (
-    <span className="text-muted">You&apos;ll not receive any notification about this post.</span>
+    <span className="text-muted">Du erhälst keine Benachrichtigungen über Aktivitäten an diesem Beitrag.</span>
   )
 
   return (
     <VStack>
-      <span className="text-category">Notifications</span>
+      <span className="text-category">Benachrichtigungen</span>
       {button}
       {text}
     </VStack>

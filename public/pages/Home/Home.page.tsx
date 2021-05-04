@@ -63,7 +63,7 @@ const HomePage = (props: HomePageProps) => {
       <div className="p-home__welcome-col">
         <VStack spacing={2}>
           <Markdown text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage} style="full" />
-          <PostInput placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."} onTitleChanged={setTitle} />
+          <PostInput placeholder={fider.session.tenant.invitation || "Gib deinen Vorschlag ein..."} onTitleChanged={setTitle} />
           <PoweredByFider className="sm:hidden md:hidden lg:block" />
         </VStack>
       </div>

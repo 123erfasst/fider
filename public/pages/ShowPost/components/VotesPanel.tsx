@@ -29,20 +29,20 @@ export const VotesPanel = (props: VotesPanelProps) => {
   return (
     <VStack>
       <VotesModal post={props.post} isOpen={isVotesModalOpen} onClose={closeModal} />
-      <span className="text-category">Voters</span>
+      <span className="text-category">Wähler</span>
       <HStack>
         {props.votes.length > 0 && <AvatarStack users={props.votes.map((x) => x.user)} />}
         {extraVotesCount > 0 && (
           <Button variant="tertiary" disabled={!canShowAll} size="small" onClick={openModal}>
-            +{extraVotesCount} more
+            +{extraVotesCount} mehr
           </Button>
         )}
         {props.votes.length > 0 && extraVotesCount === 0 && canShowAll && (
           <Button variant="tertiary" size="small" disabled={!canShowAll} onClick={openModal}>
-            see details
+            mehr Details
           </Button>
         )}
-        {props.votes.length === 0 && <span className="text-muted">None</span>}
+        {props.votes.length === 0 && <span className="text-muted">Keine</span>}
       </HStack>
     </VStack>
   )

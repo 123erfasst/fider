@@ -49,7 +49,7 @@ export const PostFilter = (props: PostFilterProps) => {
 
   return (
     <HStack>
-      <span className="text-category">View</span>
+      <span className="text-category">Ansehen</span>
       <Dropdown renderHandle={<div className="text-medium text-xs uppercase rounded-md uppercase bg-gray-100 px-2 py-1">{label}</div>}>
         {options.map((o) => (
           <Dropdown.ListItem onClick={handleChangeView(o)} key={o.value}>

@@ -114,18 +114,18 @@ export class PostsContainer extends React.Component<PostsContainerProps, PostsCo
               field="query"
               icon={this.state.query ? IconX : IconSearch}
               onIconClick={this.state.query ? this.clearSearch : undefined}
-              placeholder="Search..."
+              placeholder="Suchen..."
               value={this.state.query}
               onChange={this.handleSearchFilterChanged}
             />
           </div>
         </div>
-        <ListPosts posts={this.state.posts} tags={this.props.tags} emptyText={"No results matched your search, try something different."} />
+        <ListPosts posts={this.state.posts} tags={this.props.tags} emptyText={"Kein Ergebnis für deine Suche, versuch andere Begriffe."} />
         {this.state.loading && <Loader />}
         {showMoreLink && (
           <div className="my-4 ml-4">
             <a href={showMoreLink} className="text-primary-base text-medium hover:underline" onClick={this.showMore}>
-              View more posts
+              Mehr Beiträge ansehen
             </a>
           </div>
         )}

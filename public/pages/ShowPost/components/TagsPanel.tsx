@@ -59,7 +59,7 @@ export const TagsPanel = (props: TagsPanelProps) => {
         ))}
       </VStack>
     ) : (
-      <span className="text-muted">None</span>
+      <span className="text-muted">Keine</span>
     )
 
   const editTagsList = props.tags.length > 0 && (

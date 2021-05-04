@@ -4,11 +4,12 @@
     <div class="h-20 mb-4">
       <img src="{{ .private.logo }}" />
     </div>
-    <h1 class="text-display">NOT AUTHORIZED</h1>
-    <p>You are not authorized to view this page.</p>
+    <h1 class="text-display">NICHT AUTHORISIERT</h1>
+    <p>Du hast keine Berechtigung, auf diese Seite zuzugreifen.</p>
 
     {{ if .public.tenant }}
-    <span>Take me back to <a class="text-link" href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> home page.</span>
+    <span>Zurück zur <a class="text-link" href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a>
+      Homepage.</span>
     {{ end }}
   </div>
 </div>

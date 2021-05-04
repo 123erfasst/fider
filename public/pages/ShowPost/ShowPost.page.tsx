@@ -115,7 +115,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 </div>
               </HStack>
               <VStack>
-                <span className="text-category">Description</span>
+                <span className="text-category">Beschreibung</span>
                 {this.state.editMode ? (
                   <Form error={this.state.error}>
                     <TextArea field="description" value={this.state.newDescription} onChange={this.setNewDescription} />
@@ -124,7 +124,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 ) : (
                   <>
                     {this.props.post.description && <Markdown className="description" text={this.props.post.description} style="full" />}
-                    {!this.props.post.description && <em className="text-muted">No description provided.</em>}
+                    {!this.props.post.description && <em className="text-muted">Keine Beschreibung vorhanden.</em>}
                     {this.props.attachments.map((x) => (
                       <ImageViewer key={x} bkey={x} />
                     ))}
@@ -146,16 +146,16 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 {this.state.editMode ? (
                   <VStack>
                     <Button variant="primary" onClick={this.saveChanges}>
-                      <Icon sprite={IconCheck} /> <span>Save</span>
+                      <Icon sprite={IconCheck} /> <span>Speichern</span>
                     </Button>
                     <Button onClick={this.cancelEdit}>
-                      <Icon sprite={IconX} /> <span>Cancel</span>
+                      <Icon sprite={IconX} /> <span>Abbrechen</span>
                     </Button>
                   </VStack>
                 ) : (
                   <VStack>
                     <Button onClick={this.startEdit}>
-                      <Icon sprite={IconPencilAlt} /> <span>Edit</span>
+                      <Icon sprite={IconPencilAlt} /> <span>Bearbeiten</span>
                     </Button>
                     <ResponseForm post={this.props.post} />
                   </VStack>

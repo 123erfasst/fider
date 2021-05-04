@@ -128,12 +128,12 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
   public render() {
     const modal = (
       <Modal.Window canClose={false} isOpen={this.state.submitted} onClose={this.noop}>
-        <Modal.Header>Thank you for registering!</Modal.Header>
+        <Modal.Header>Danke für deine Registrierung!</Modal.Header>
         <Modal.Content>
           <p>
-            We have just sent a confirmation link to <b>{this.state.email}</b>.
+            Wir haben einen Bestätigungslink an <b>{this.state.email}</b> geschickt.
           </p>
-          <p>Click the link to complete the registration.</p>
+          <p>Klicke auf den Link um deine Registrierung abzuschliessen.</p>
         </Modal.Content>
       </Modal.Window>
     )
@@ -145,12 +145,12 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
           <img className="logo" alt="Logo" src="https://getfider.com/images/logo-100x100.png" />
         </div>
 
-        <h3 className="text-display mb-2">1. Who are you?</h3>
+        <h3 className="text-display mb-2">1. Wer bist du?</h3>
         <DisplayError fields={["token"]} error={this.state.error} />
 
         {this.user ? (
           <p>
-            Hello, <b>{this.user.name}</b> {this.user.email && `(${this.user.email})`}
+            Hallo, <b>{this.user.name}</b> {this.user.email && `(${this.user.email})`}
           </p>
         ) : (
           <>
