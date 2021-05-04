@@ -58,7 +58,7 @@ export class SimilarPosts extends React.Component<SimilarPostsProps, SimilarPost
   public render() {
     return (
       <>
-        <PageTitle title="Similar posts" subtitle="Stimme stattdessen für existierende Beiträge ab." />
+        <PageTitle title="Ähnliche Beiträge" subtitle="Stimme stattdessen für existierende Beiträge ab." />
         {this.state.loading ? (
           <Loader />
         ) : (
