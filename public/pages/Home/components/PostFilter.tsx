@@ -26,7 +26,7 @@ export const PostFilter = (props: PostFilterProps) => {
   }
 
   const options: OptionItem[] = [
-    { value: "trending", label: "Trending" },
+    { value: "trending", label: "Angesagt" },
     { value: "recent", label: "Neuste" },
     { value: "most-wanted", label: "Meiste Stimmen" },
     { value: "most-discussed", label: "Meiste Kommentare" },
