@@ -42,9 +42,9 @@ export default class CompleteSignInProfilePage extends React.Component<HomePageP
     return (
       <>
         <Modal.Window canClose={false} isOpen={true} onClose={this.noop}>
-          <Modal.Header>Complete your profile</Modal.Header>
+          <Modal.Header>Dein Profil</Modal.Header>
           <Modal.Content>
-            <p>Because this is your first sign in, please enter your name.</p>
+            <p>Du meldest dich zum ersten Mal an. Bitte gib deinen Namen ein.</p>
             <Form error={this.state.error}>
               <Input
                 field="name"
@@ -53,7 +53,7 @@ export default class CompleteSignInProfilePage extends React.Component<HomePageP
                 placeholder="Name"
                 suffix={
                   <Button type="submit" onClick={this.submit} variant="primary" disabled={this.state.name === ""}>
-                    Submit
+                    Abschicken
                   </Button>
                 }
               />
