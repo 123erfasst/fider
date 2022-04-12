@@ -137,6 +137,12 @@ func validateKey(kind enum.EmailVerificationKind, c *web.Context) (*models.Email
 		return nil, c.Failure(err)
 	}
 
+	if strings.HasSuffix(findByKey.Result.Email, "123erfasst.de") ||
+		strings.HasSuffix(findByKey.Result.Email, "nevaris.com") ||
+		strings.HasSuffix(findByKey.Result.Email, "nemetschek.com") {
+		return findByKey.Result, nil
+	}
+
 	//If key has been used, return Gone
 	if findByKey.Result.VerifiedAt != nil {
 		return nil, c.Gone()
